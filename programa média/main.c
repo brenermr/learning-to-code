@@ -26,13 +26,14 @@
              sNotas = 0;
              printf("Digite quantas notas serão calculadas:  \n");
              scanf("%d", &qNotas);
+             //enquanto i for  menor que a qNotas incrmente uma unidade de i
              for(int i = 0; i < qNotas; i++)
              {
                 //solicita o valor das notas
                  printf("Digite as notas: ");
                 //recolhe os valores de cada nota 
                  scanf("%d", &nota);
-                 //soma o valor das notas
+                 //soma as notas
                  sNotas = sNotas+nota;
                 //Divide a soma das notas pela quantidade de notas
                 media = sNotas / qNotas;   
