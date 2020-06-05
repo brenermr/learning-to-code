@@ -5,7 +5,7 @@ int number;
 int qnt = 0;
 
 
-
+//novo
 int main(void)
 {
     printf("Escreva um número: \n");       
