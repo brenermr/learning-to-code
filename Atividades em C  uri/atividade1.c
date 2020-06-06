@@ -7,11 +7,7 @@
      
      float main()
     {
-        printf("Área do triânculo retângulo: A(Base) C(Altura) \n");
-        printf("Área do circulo:  C(Raio) Pi(3,14) \n");
-        printf("Área do trapézio: A(BaseMenor) B(BaseMaior) C(Altura) \n");
-        printf("Área do quadrado: B(Lado) \n");
-        printf("Área do retângulo: A(Lado) B(Lado) \n");
+        
         printf("Digite o valor de: A B C: \n");
         scanf("%f %f %f", &a, &b, &c);
 
