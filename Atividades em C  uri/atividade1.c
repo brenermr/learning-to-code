@@ -5,7 +5,7 @@
     float c;
     float triangulo, circulo, trapezio, quadrado, retangulo;
      
-     float main()
+     int main()
     {
         
         printf("Digite o valor de: A B C: \n");
@@ -22,4 +22,6 @@
         printf("Área do trapezio = %.3f \n", trapezio);
         printf("Área do quadrado = %.3f \n", quadrado);
         printf("Área do retângulo = %.3f \n", retangulo);
+
+        return 0;
     }
