@@ -23,12 +23,17 @@ Exemplo de Entrada	Exemplo de Saída
         int vetor[6];
         int soma = 0;
         int i;
+       
         scanf("%d %d %d %d %d %d", &vetor[0], &vetor[1], &vetor[2], &vetor[3], &vetor[4], &vetor[5]);
+       
         for(i=0;i<6;i++)
         {
+            printf("i = %d \n", i);
+            printf("vetor na posição %d = %d \n", i, vetor[i]);
             if(vetor[i]>0)
             {
                 soma++;
+                printf("soma = %d ", soma);
             }
         }
         printf("%d valores positivos \n", soma);
