@@ -38,10 +38,7 @@ Exemplo de Entrada	Exemplo de Saída
         {
             printf("Fora de intervalo \n");
         }
-        
-        
-
-        
+                
         
         return 0;
     }
