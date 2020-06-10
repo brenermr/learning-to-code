@@ -16,15 +16,14 @@ Exemplo de Entrada	Exemplo de Saída
 #include<stdio.h>
     int main()
     {
-        int x, y;
-        int soma = 0;
-        int impar;
+        int entrada[2];
+        int soma = 0;;
         int p=0;
-        
-        scanf("%d %d", &x, &y);
-        while (p<y)
+    
+        scanf("%d %d", &entrada[0], &entrada[1]);
+        for (entrada[0]>entrada[1])
         {
-            if (x)
+            if ()
             {
                 /* code */
             }

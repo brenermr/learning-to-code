@@ -1,0 +1,13 @@
+/*
+Aqui começa o código em css
+*/
+
+body {
+    background-color: red;
+}
+p {
+        margin-left: 100px;
+    }
+table {
+  background-color: white;  
+}    
