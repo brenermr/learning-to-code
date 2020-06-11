@@ -21,29 +21,30 @@ Exemplo de Entrada	Exemplo de Saída
     {
         int n;
         int i;
-        int soma = 0;
         int p=0;
-        
-        scanf("%d", n);
+        //COLETA O VALOR DE N
+        scanf("%d", &n);
+        //VETOR COM POSIÇÕES N
         int valor[n];
-
-        
-        for (i = 1; i <=  n; i++)
+        //I É 1, ENQUANTO I FOR MENOR QUE N, INCREMENTE I
+        for (i = 1; i <= n; i++)
         {
-            if (i%2 != 0)
+            // SE I FOR PAR
+            if (i % 2 == 0)
             {
-               valor[p]++;
-               p++;
+                //VALOR[PAR] É IGUAL O VALOR DA POSIÇÃO
+                valor[p] = i;
+                //PAR RECEBE UMA QUANTIDADE; VALOR[P] = [I]
+                p++;
             }
-
-            if ()
-            {
-                
-            }
-            
             
         }
+        //I É 0, ENQUANTO I FOR MENOR QUE A QUANTIDADE DE VALORES PARES, FAÇA
+        for (i = 0; i < p; i++)
+        {
+            //ESCREVA O VALOR[PAR] QUE ESTÁ NA POSIÇÃO I
+            printf("%d ^ 2= %d \n", valor[i], (valor[i]*valor[i]));
+        }
         
-        printf("%d ^ 2= %d \n");
         return 0;
     }
