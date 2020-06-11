@@ -36,14 +36,14 @@ Exemplo de Entrada	Exemplo de Saída
                p++;
             }
 
-            if (/* condition */)
+            if ()
             {
-                /* code */
+                
             }
             
             
         }
         
-        printf("%d ^ 2= %d \n",);
+        printf("%d ^ 2= %d \n");
         return 0;
     }
