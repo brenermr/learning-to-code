@@ -30,15 +30,14 @@
              return imc;     
          };
 
+         
          var pesoPrimeiro = prompt("Digite o peso do primeiro Primo: ");
          var alturaPrimeiro = prompt("Digite a altura do primeiro primo:");
-         var imc = calculaImc(pesoPrimeiro, alturaPrimeiro);
-         mostra("O imc do primeiro primo é: " + imc.toFixed(2));
+         mostra("O imc do primeiro primo é: " + calculaImc(pesoPrimeiro, alturaPrimeiro).toFixed(2));
 
-        var pesoSegundo = prompt("Digite o peso do segundo Primo: ");
-        var alturaSegundo = prompt("Digite a altura do segundo primo:");
-        var imc = calculaImc(pesoSegundo, alturaSegundo);
-        mostra("O imc do segundo primo é: " + imc.toFixed(2));
+         var pesoSegundo = prompt("Digite o peso do segundo Primo: ");
+         var alturaSegundo = prompt("Digite a altura do segundo primo:");
+         mostra("O imc do segundo primo é: " + calculaImc(pesoSegundo, alturaSegundo).toFixed(2));
 
          
          //
