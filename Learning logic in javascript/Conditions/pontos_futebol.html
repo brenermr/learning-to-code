@@ -7,6 +7,51 @@
     </head>
     <body>
         <script>
+            //Essa função mostra um alerta
+            function mostrar(alerta)
+            {
+                alert(alerta);
+            };
+
+            //Essa função calcula o número de pontos do time
+            function calcularPontos(vitoria, empate )
+            {
+                return (vitoria * 3) + parseInt(empate);    
+               
+            };
+
+            //Essa função calcula:   ponto != pontoRival
+            function calculaDiferenca(pontoMaior, pontoMenor)
+            {
+                return pontoMaior - pontoMenor;
+            };
+
+            //entrada de dados
+            var vitoria = prompt("Quantos jogos o time venceu ? ");
+            var empate = prompt("Quandos jogos o time empatou ? ");
+            var vitoriaRival = prompt("Quantos jogos o time rival venceu ? ");
+            var empateRival = prompt("Quandos jogos o time rival empatou ? ");
+            
+            //saída de dados
+            mostrar("O time tem um total de " + calcularPontos(vitoria, empate) + " pontos !!!");
+            mostrar("O time rival tem um total de " + calcularPontos(vitoriaRival, empateRival) + " pontos !!!");
+            
+            //Condicionais
+            var ponto = calcularPontos(vitoria, empate);
+            var pontoRival = calcularPontos(vitoriaRival, empateRival);
+
+            if (ponto > pontoRival)
+            {
+                mostrar("O time fez " + calculaDiferenca(ponto, pontoRival) +  " pontos a mais que o time rival");
+            };
+            if (ponto < pontoRival)
+            {
+              mostrar("O time rival fez " + calculaDiferenca(pontoRival, ponto) + " pontos a mais que o time.");
+            };
+            if (ponto == pontoRival)
+            {
+              mostrar("O time e o time rival empatram  no placa de pontos");  
+            };
             
         </script>
         
