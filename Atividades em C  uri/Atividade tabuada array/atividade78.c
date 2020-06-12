@@ -23,15 +23,13 @@ Exemplo de Entrada	Exemplo de Saída
         scanf("%d", &x);
         if (x > 2 && x < 1000)
         {
-            for (i = 1; i <= tabuada[10]; i++)
+            for (i = 0; i <= 9; i++)
             {
-                tabuada[multiplicacao]++;
-                multiplicacao++;
-
-            }
-            for (i = 0; i < tabuada[multiplicacao]; i++)
+                  tabuada[i]=(i+1)*x;
+            }    
+            for (i = 1; i <= 10; i++)
             {
-               printf("%d x %d = %d", tabuada[i], x, tabuada[i] * x );
+               printf("%d x %d = %d", i, x, tabuada[i-1]);
             }
             
             
