@@ -15,19 +15,29 @@ Exemplo de Entrada	Exemplo de Saída
     int main()
     {
         int i;
-        int vetor[2];//vetor 0= valor N | vetor 1=limite  de N
+        int x;
+        int vetor[10000];
+        int p = 0;
         
-        scanf("%d", &vetor[0]);
-        vetor[1] = 10000;
-        if (vetor[0] < vetor[1])
+        scanf("%d", &x);
+        if (x < 10000)
         {
-            for (i=1;i<= 10000;i++)
+            for (i = 0; i < 10000; i++)
             {
-                if (i%vetor[0]==2)
+                if (i % x == 2)
                 {
-                    printf("%d \n",i);
+                    vetor[p] = i;
+                    p++;
+                    
                 }
+
+                
             }
+            for (i = 0; i < p; i++)
+            {
+                printf("%d \n", vetor[i]);
+            }
+                      
         }    
         return 0;
     }
