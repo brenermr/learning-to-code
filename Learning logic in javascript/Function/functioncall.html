@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> CHAMANDO FUNÇÕES | Javascript</title>
+    </head>
+    <body>
+        <script>
+            //Ordem das chamadas das funções:
+
+            var primeira = function()
+            {
+                console.log(" 1 - antes");
+                segunda();
+                console.log("1 - depois");  
+            };
+
+            var segunda = function()
+            {
+                console.log("2 - antes");
+                terceira();
+                console.log(" 2 - depois");                
+            };
+
+            var terceira = function()
+            {
+                console.log("3");
+                
+            };
+
+            primeira();
+            // Mostra  primeira função
+              //Mostra segunda função
+                //Mostra terceira função
+              //Mostra fim da segunda função;
+            //Mostra fim da primeira função        
+        </script>
+        
+    </body>
+</html>
