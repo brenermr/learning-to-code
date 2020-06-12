@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DADOS VITAIS | Javascript</title>
+    </head>
+    <body>
+        <script>
+            //Entrada - idade (dias = idade * 365; batimentos = dias * 24 * 60 * 80
+            //saída dias, batimentos
+            
+
+            //Essa função mostra um alerta
+            var mostra = function(mensagemAlerta)
+            {
+                alert(mensagemAlerta);
+            };
+            //Essa função calcula os Dias de Vida
+            var calculaDiasDeVida = function(idade)
+            {
+                var dias = idade * 365;
+                return dias;
+            };
+
+            //Essa função calcula os batimentos
+            var calculaBatimentos = function(dias)
+            {
+                
+                var batimentos = dias * 24 * 60 * 80;
+                return batimentos;
+            };
+            
+            
+        
+            var idade = prompt("Digite sua idade: ");
+            mostra("Você já viveu " + calculaDiasDeVida(idade) + " dias de vida !");
+            var dias = calculaDiasDeVida(idade);
+            mostra("Seu coração já bateu " + calculaBatimentos(dias)+ " vezes !!!");
+
+
+            
+
+
+        </script>
+        
+    </body>
+</html>
