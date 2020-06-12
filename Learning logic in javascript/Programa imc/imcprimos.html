@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IMC PRIMOS | Javascript</title>
+    </head>
+    <body>
+        <script>
+            //Fazer um programa que calcule o imc de pessoas com dados diferentes
+            // imc & dados()
+        
+        //Essa função pula uma linha
+        var pularLinha = function()
+        {
+            document.write("<br>");
+        };
+        
+        //Essa função mostra uma frase e pula uma linha   
+        var mostra = function(frase)
+         {
+             alert(frase);
+             pularLinha;
+         };
+
+         //Essa função calcula o imc dos primos
+         var calculaImc = function(peso, altura)
+         {
+             var imc = peso / (altura*altura);
+             return imc;     
+         };
+
+         var pesoPrimeiro = prompt("Digite o peso do primeiro Primo: ");
+         var alturaPrimeiro = prompt("Digite a altura do primeiro primo:");
+         var imc = calculaImc(pesoPrimeiro, alturaPrimeiro);
+         mostra("O imc do primeiro primo é: " + imc.toFixed(2));
+
+        var pesoSegundo = prompt("Digite o peso do segundo Primo: ");
+        var alturaSegundo = prompt("Digite a altura do segundo primo:");
+        var imc = calculaImc(pesoSegundo, alturaSegundo);
+        mostra("O imc do segundo primo é: " + imc.toFixed(2));
+
+         
+         //
+
+        
+
+
+        </script>
+        
+    </body>
+</html> 
