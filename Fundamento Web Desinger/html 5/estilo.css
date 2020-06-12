@@ -40,3 +40,7 @@
   margin: 5px;
   padding: 10px;
 }
+
+table, tr, td {
+  border: 1px solid red;
+}
