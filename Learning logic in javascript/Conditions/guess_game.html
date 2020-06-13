@@ -7,12 +7,42 @@
     </head>
     <body>
         <script>
-            var numeroPensado = Math.random() * 100;
-            var chute = prompt("Adivinhe um número de 0 a 100: ");
+          //Essa função mostra um alerta
+          function mostra(alerta)
+          {
+            alert(frase);
+          };
+          
+          //Essa função verifica se o valor do chute é maior ou menor que o valor do número pensado, depois mostra um alerta
+          function verificarChute(chute)
+           {
+                if (chute < numeroPensado)
+                {
+                    mostra("O  número pensado é maior !")
+                } else 
+                {
+                    mostra("O número pensado é menor")
+                };
+           };
+           //Essa função sorteia um número de  0 até N
+           function sorteia(n)
+           {
+               
+                
+           };
+           
+           
+           
+            var n = prompt("Sorteia um valor de 0 a N, defina n:")
+            var numeroPensado = sorteia(n) ;
+            var chute = prompt("Adivinhe um número de 0 a " + n + ": ");
 
             if (chute == numeroPensado)
             {
               alert("Parabéns você acertou ! O númmero pensado era " + numeroPensado);  
+            } else 
+            {
+              alert("Você errou, o número correto era: " + numeroPensado);  
             };
 
         </script>
