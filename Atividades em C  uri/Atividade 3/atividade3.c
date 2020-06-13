@@ -29,6 +29,7 @@ MOEDAS:
 3 moeda(s) de R$ 0.01
 */
 
+/*
 #include<stdio.h>
 
 int main()
@@ -87,3 +88,49 @@ int main()
     
     return 0;
 }
+*/
+
+#include<stdio.h>
+    int main()
+    {
+        int quantCedulas[6];
+        int quantMoedas[6];
+        double cedulas[6] = {100.00,50.00,20.00,10.00,5.00,2.00};
+        double moedas[6] = {1.00,0.50,0.25,0.10,0.05,0.01};
+        double valor;
+        int totalCedulas, totalMoedas, resto;
+        int i;
+
+        scanf("%d", &valor);
+
+        totalCedulas=valor/1.0;
+        totalMoedas=(valor-totalCedulas)*100;
+
+        resto = totalMoedas;
+        for (i = 0; i < 6; i++)
+        {
+            quantCedulas[i]=resto/(int)cedulas[i];
+            resto = resto % (int)cedulas[i];
+        }
+                
+        
+
+        printf("NOTAS :\n");
+        for (i = 0; i < 6; i++)
+        {
+            printf("%d nota(s) de R$ %2.lf \n", quantCedulas[i], cedulas[i]);
+        }
+
+        printf("MOEDAS : \n");
+        for (i = 0; i < 6; i++)
+        {
+             printf("%d moeda(s) de R$ %2.lf \n", quantMoedas[i], moedas[i]);    
+        }
+
+
+        
+
+
+
+        
+    }
