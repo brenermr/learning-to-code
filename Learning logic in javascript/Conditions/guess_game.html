@@ -10,7 +10,7 @@
           //Essa função mostra um alerta
           function mostra(alerta)
           {
-            alert(frase);
+            alert(alerta);
           };
           
           //Essa função verifica se o valor do chute é maior ou menor que o valor do número pensado, depois mostra um alerta
@@ -18,33 +18,43 @@
            {
                 if (chute < numeroPensado)
                 {
-                    mostra("O  número pensado é maior !")
+                    mostra("O  número pensado é maior !");
                 } else 
                 {
-                    mostra("O número pensado é menor")
+                    mostra("O número pensado é menor");
                 };
            };
            //Essa função sorteia um número de  0 até N
            function sorteia(n)
            {
-               
-                
+             numeroPensado = Math.round(Math.random() * n);
+             return numeroPensado;   
            };
            
            
-           
-            var n = prompt("Sorteia um valor de 0 a N, defina n:")
-            var numeroPensado = sorteia(n) ;
-            var chute = prompt("Adivinhe um número de 0 a " + n + ": ");
-
-            if (chute == numeroPensado)
-            {
-              alert("Parabéns você acertou ! O númmero pensado era " + numeroPensado);  
-            } else 
-            {
-              alert("Você errou, o número correto era: " + numeroPensado);  
-            };
-
+            
+            var n = prompt("Sorteia um valor de 0 a N, defina n:");
+            var numeroPensado = sorteia(n);
+            
+            
+            
+            for(var i = 0; i <= 3; i++)
+              {
+                if(i == 3)
+                {
+                  mostra("Você perdeu !!!");
+                  break;
+                };
+                var chute = prompt("Digite um número: ");
+                if(chute == numeroPensado)
+                {
+                  mostra("Parabéns você venceu!");
+                  break;
+                } else
+                {
+                  verificarChute(chute);
+                }
+              };
         </script>
         
     </body>
