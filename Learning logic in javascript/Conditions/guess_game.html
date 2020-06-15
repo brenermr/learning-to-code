@@ -9,6 +9,7 @@
         <script>
           //Usuário escolhe um número n, e tenta adivinhar um número de 0 até N , com 3 chances !li
           //Ultilize function  e laços de repetição !
+
           //Essa função mostra um alerta
           function mostra(alerta)
           {
@@ -26,6 +27,7 @@
                     mostra("O número pensado é menor");
                 };
            };
+
            //Essa função sorteia um número de  0 até N
            function sorteia(n)
            {
@@ -45,6 +47,7 @@
                 if(i == 3)
                 {
                   mostra("Você perdeu !!!");
+                  mostra("O número pensado era: " + numeroPensado);
                   break;
                 };
                 var chute = prompt("Digite um número: ");
