@@ -22,22 +22,45 @@ Exemplo de Entrada	Exemplo de Saída
     int main()
     {
         int n;
-        int i,j;
-        double soma = 0;
+        int i, j;
+        double soma;
+        double peso;
+        double media;
         
-        scanf("%d",&n);
+
+        scanf("%d", &n);
         double matriz[n][3];
 
         for (i = 0; i < n; i++)
         {
-            for (j = 0; j < n; j++)
+            for (j = 0; j < 3; j++)
             {
-                scanf("%lf", &matriz[i][j])
+                scanf("%lf", &matriz[i][j]);
             }
-            
+        }       
+        
+        for (i = 0; i < n; i++)
+        {
+            soma = 0;
+            for (j = 0; j < 3; j++)
+            {
+                if (j == 0)
+                {
+                    peso = 2.0;
+                }
+                if (j == 1)
+                {
+                    peso = 3.0;
+                }
+                if (j == 2)
+                {
+                    peso = 5.0;
+                }
+                soma += (matriz[i][j]*peso);
+            }
+            media = soma/10.0;
+            printf("%.1lf\n", media);
+            media = 0;
         }
-        
-        
-
-        
     }
+ 

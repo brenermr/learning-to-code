@@ -44,7 +44,7 @@ Percentual de sapos: 25.00 %
         int i;
         int totalCobaias = 0.0;
         scanf("%d", &n);
-        int testes[n];
+        int testesEmEspecie[n];
         char especie[n];
         int totalEspecie[3] = {0,0,0}; //0=coelho , 1=rato, 2=sapo;
         
@@ -52,21 +52,21 @@ Percentual de sapos: 25.00 %
 
         for (i = 0; i < n; i++)
         {
-            scanf("%d %s", &testes[i], &especie[i]);
+            scanf("%d %s", &testesEmEspecie[i], &especie[i]);
             if (especie[i] == 'C')
             {
-                totalEspecie[0] = testes[i] + totalEspecie[0];
-                totalCobaias += testes[i];
+                totalEspecie[0] = testesEmEspecie[i] + totalEspecie[0];
+                totalCobaias += testesEmEspecie[i];
             }
             if (especie[i] == 'R')
             {
-                totalEspecie[1] = testes[i] + totalEspecie[1];
-                totalCobaias += testes[i];
+                totalEspecie[1] = testesEmEspecie[i] + totalEspecie[1];
+                totalCobaias += testesEmEspecie[i];
             }
             if (especie[i] == 'S')
             {
-                totalEspecie[2] = testes[i] + totalEspecie[2]; 
-                totalCobaias += testes[i];
+                totalEspecie[2] = testesEmEspecie[i] + totalEspecie[2]; 
+                totalCobaias += testesEmEspecie[i];
             }
             
             
