@@ -18,16 +18,15 @@ I=? J=0
     int main()
     {
         int i, j;
-        int matriz[60][60];
+        int matriz[14][14];
         
 
         for (i = 1; i <= 14 ; i)
         {
-            for (j = 60; j >= 0; j = j -5)
+            for (j = 60; j >= 0; j -= 5)
             {
-                
                 printf("I=%d J=%d\n", i, j);
-                i = i + 3;
+                i += 3;
             }
             
         }
