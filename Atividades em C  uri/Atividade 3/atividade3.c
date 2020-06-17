@@ -82,12 +82,47 @@ int main()
     m01 = moedas / 1;
     printf("%d moeda(s) de R$ 0.01 \n", m01);
     
+    #include <stdio.h>
+ 
+int main() {
+  
+    int dinheiro[1][7];
+    double valor;
+    int i, j;
+    int resto;
+    scanf("%d", &valor);
+    dinheiro[0][0] = valor /100;
+    resto = valor % 100;
+    dinheiro[0][1] = resto / 50;
+    resto = resto % 50;
+    dinheiro[0][2] = resto / 20;
+    resto = resto % 20;
+    dinheiro[0][3] = resto / 10;
+    resto = resto % 10;
+    dinheiro[0][4] = resto / 5;
+    resto = resto % 5;
+    dinheiro[0][5] = resto / 2;
+    resto = resto % 2;
+    dinheiro[0][6] = resto / 1;
+
+    printf("%d\n", valor);
+    printf("%d nota(s) de R$ 100,00\n",dinheiro[0][0]);
+    printf("%d nota(s) de R$ 50,00\n",dinheiro[0][1]);
+    printf("%d nota(s) de R$ 20,00\n",dinheiro[0][2]);
+    printf("%d nota(s) de R$ 10,00\n",dinheiro[0][3]);
+    printf("%d nota(s) de R$ 5,00\n",dinheiro[0][4]);
+    printf("%d nota(s) de R$ 2,00\n",dinheiro[0][5]);
+    printf("%d nota(s) de R$ 1,00\n",dinheiro[0][6]);
+    
+    
+    return 0;
+}
 
 
     
     
     return 0;
-}
+
 */
 
 #include<stdio.h>

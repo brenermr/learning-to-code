@@ -19,7 +19,6 @@ I=? J=0
     {
         int i, j;
         int matriz[14][14];
-        
 
         for (i = 1; i <= 14 ; i)
         {
