@@ -97,12 +97,12 @@ int main() {
         dinheiro[1][5] = resto / 1;
         
         printf("NOTAS:\n");
-        printf("%d nota(s) de R$ 100.00\n".dinheiro[0][0]);
-        printf("%d nota(s) de R$ 50.00\n".dinheiro[0][1]);
-        printf("%d nota(s) de R$ 20.00\n".dinheiro[0][2]);
-        printf("%d nota(s) de R$ 10.00\n".dinheiro[0][3]);
-        printf("%d nota(s) de R$ 5.00\n".dinheiro[0][4]);
-        printf("%d nota(s) de R$ 2.00\n".dinheiro[0][5]);
+        printf("%d nota(s) de R$ 100.00\n",dinheiro[0][0]);
+        printf("%d nota(s) de R$ 50.00\n",dinheiro[0][1]);
+        printf("%d nota(s) de R$ 20.00\n",dinheiro[0][2]);
+        printf("%d nota(s) de R$ 10.00\n",dinheiro[0][3]);
+        printf("%d nota(s) de R$ 5.00\n",dinheiro[0][4]);
+        printf("%d nota(s) de R$ 2.00\n",dinheiro[0][5]);
         printf("MOEDAS:\n");
         printf("%d moeda(s) de R$ 1.00\n",dinheiro[1][0]);
         printf("%d moeda(s) de R$ 0.50\n",dinheiro[1][1]);
