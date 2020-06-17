@@ -27,63 +27,7 @@ MOEDAS:
 2 moeda(s) de R$ 0.10
 0 moeda(s) de R$ 0.05
 3 moeda(s) de R$ 0.01
-*/
 
-/*
-#include<stdio.h>
-
-int main()
-{
-    double valor;
-    int n100, n50, n20, n10, n5, n2;
-    int m1, m50, m25, m10, m5, m01;
-    int moedas, cedulas;
-
-    scanf("%lf", &valor);
-    cedulas = valor / 1.0;
-    
-    printf("NOTAS: \n");
-    n100 = cedulas / 100;
-    printf("%d nota(s) de R$ 100.00 \n", n100);
-    cedulas = cedulas % 100;
-    n50 = cedulas / 50;
-    printf("%d nota(s) de R$ 50.00 \n", n50);
-    cedulas = cedulas % 50;
-    n20 = cedulas / 20;
-    printf("%d nota(s) de R$ 20.00 \n", n20);
-    cedulas = cedulas % 20;
-    n10 = cedulas / 10;
-    printf("%d nota(s) de R$ 10.00 \n", n10);
-    cedulas = cedulas % 10;
-    n5 = cedulas / 5;
-    printf("%d nota(s) de R$ 5.00 \n", n5);
-    cedulas = cedulas % 5;
-    n2 = cedulas / 2;
-    printf("%d nota(s) de R$ 2.00 \n", n2);
-
-    printf("MOEDAS: \n");
-    cedulas = cedulas % 2;
-    m1 = cedulas / 1;
-    printf("%d moeda(s) de R$ 1.00 \n", m1);
-    moedas = (valor - cedulas)*100;
-    moedas = moedas % 100;
-    m50 = moedas / 50;
-    printf("%d moeda(s) de R$ 0.50 \n", m50);
-    moedas = moedas % 50;
-    m25 = moedas / 25;
-    printf("%d moeda(s) de R$ 0.25 \n", m25);
-    moedas = moedas % 25;
-    m10 = moedas / 10;
-    printf("%d moeda(s) de R$ 0.10 \n", m10);
-    moedas = moedas % 10;
-    m5 = moedas / 5;
-    printf("%d moeda(s) de R$ 0.05 \n", m5);
-    moedas = moedas % 5;
-    m01 = moedas / 1;
-    printf("%d moeda(s) de R$ 0.01 \n", m01);
-    
-    #include <stdio.h>
- 
 int main() {
   
     int dinheiro[1][7];
@@ -114,58 +58,57 @@ int main() {
     printf("%d nota(s) de R$ 2,00\n",dinheiro[0][5]);
     printf("%d nota(s) de R$ 1,00\n",dinheiro[0][6]);
     
-    
-    return 0;
-}
-
-
-    
-    
-    return 0;
-
 */
-
 #include<stdio.h>
     int main()
     {
-        int quantCedulas[6];
-        int quantMoedas[6];
-        double cedulas[6] = {100.00,50.00,20.00,10.00,5.00,2.00};
-        double moedas[6] = {1.00,0.50,0.25,0.10,0.05,0.01};
+        int tipo[2];// 0 = cedulas; 1 = moedas
+        int dinheiro[2][6];// linha 0 = valores de cédula; linha 1 = valores de moeda
         double valor;
-        int totalCedulas, totalMoedas, resto;
         int i;
-
-        scanf("%d", &valor);
-
-        totalCedulas=valor/1.0;
-        totalMoedas=(valor-totalCedulas)*100;
-
-        resto = totalMoedas;
-        for (i = 0; i < 6; i++)
-        {
-            quantCedulas[i]=resto/(int)cedulas[i];
-            resto = resto % (int)cedulas[i];
-        }
-                
+        int resto;
+        scanf("%lf", &valor);
+        tipo[0] = valor / 1.0;
+        dinheiro[0][0] = valor /100;
+        resto = (int)valor % 100;
+        dinheiro[0][1] = resto / 50;
+        resto = resto % 50;
+        dinheiro[0][2] = resto / 20;
+        resto = resto % 20;
+        dinheiro[0][3] = resto / 10;
+        resto = resto % 10;
+        dinheiro[0][4] = resto / 5;
+        resto = resto % 5;
+        dinheiro[0][5] = resto / 2;
+        resto = resto % 2;
+        //moeda
+        dinheiro[1][0] = resto / 1;
+        //centavos
+        tipo[1] = (valor - tipo[0]) * 100;
+        resto = tipo[1] % 100;
+        dinheiro[1][1] = resto / 50;
+        resto = resto % 50;
+        dinheiro[1][2] = resto / 25;
+        resto = resto % 25;
+        dinheiro[1][3] = resto / 10;
+        resto = resto % 10;
+        dinheiro[1][4] = resto / 5;
+        resto = resto % 5;
+        dinheiro[1][5] = resto / 1;
         
-
-        printf("NOTAS :\n");
-        for (i = 0; i < 6; i++)
-        {
-            printf("%d nota(s) de R$ %2.lf \n", quantCedulas[i], cedulas[i]);
-        }
-
-        printf("MOEDAS : \n");
-        for (i = 0; i < 6; i++)
-        {
-             printf("%d moeda(s) de R$ %2.lf \n", quantMoedas[i], moedas[i]);    
-        }
-
-
-        
-
-
-
-        
+        printf("NOTAS:\n");
+        printf("%d nota(s) de R$ 100.00\n".dinheiro[0][0]);
+        printf("%d nota(s) de R$ 50.00\n".dinheiro[0][1]);
+        printf("%d nota(s) de R$ 20.00\n".dinheiro[0][2]);
+        printf("%d nota(s) de R$ 10.00\n".dinheiro[0][3]);
+        printf("%d nota(s) de R$ 5.00\n".dinheiro[0][4]);
+        printf("%d nota(s) de R$ 2.00\n".dinheiro[0][5]);
+        printf("MOEDAS:\n");
+        printf("%d moeda(s) de R$ 1.00\n",dinheiro[1][0]);
+        printf("%d moeda(s) de R$ 0.50\n",dinheiro[1][1]);
+        printf("%d moeda(s) de R$ 0.25\n",dinheiro[1][2]);
+        printf("%d moeda(s) de R$ 0.10\n",dinheiro[1][3]);
+        printf("%d moeda(s) de R$ 0.05\n",dinheiro[1][4]);
+        printf("%d moeda(s) de R$ 0.01\n",dinheiro[1][5]);        
+        return 0;
     }
