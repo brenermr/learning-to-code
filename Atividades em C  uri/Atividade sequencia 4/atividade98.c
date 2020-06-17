@@ -14,7 +14,7 @@ I=2 J=?
 #include<stdio.h>
     int main()
     {
-        double matriz[36][2];
+        double matriz[36][2];// 0= i 1=j
         double i = 0;
         double j = 1;
        int l, c;
