@@ -30,6 +30,7 @@ I=2 J=?
                 count = 0;
             }
             matriz[l][0] = i;
+            
             matriz[l][1] = j;
             j++;
             count++;
