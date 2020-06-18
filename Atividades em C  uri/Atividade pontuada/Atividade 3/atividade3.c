@@ -68,7 +68,7 @@ int main() {
         int i;
         int resto;
         scanf("%lf", &valor);
-        tipo[0] = valor / 1.0;
+        tipo[0] = (double)valor / 1.0;
         dinheiro[0][0] = valor /100;
         resto = tipo[0] % 100;
         dinheiro[0][1] = resto / 50;
