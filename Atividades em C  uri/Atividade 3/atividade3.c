@@ -70,7 +70,7 @@ int main() {
         scanf("%lf", &valor);
         tipo[0] = valor / 1.0;
         dinheiro[0][0] = valor /100;
-        resto = (int)valor % 100;
+        resto = tipo[0] % 100;
         dinheiro[0][1] = resto / 50;
         resto = resto % 50;
         dinheiro[0][2] = resto / 20;
