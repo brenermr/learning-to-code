@@ -15,79 +15,73 @@ Saída
 Imprima todas as classificações do triângulo especificado na entrada.
 */
 
-#include<stdio.h>
+#include <stdio.h>
+  double numero[3];
+  double ponto[3];
+  void verificaNumero();
+  void verificaTriangulo();
+
+
+  int main()
+  {
     
-    int main()
-    {
-        //ordenar do maior para o menor.
-        double n1, n2, n3;
-        double a, b, c;
-        scanf("%lf %lf %lf", &n1, &n2, &n3);
+    scanf("%lf%lf%lf", &numero[0], &numero[1], &numero[2]);
+    verificaNumero();
+    verificaTriangulo();
+    return 0;
 
-        //definindo maior valor como maior lado
-        if (n1 >= n2 && n1 >= n3)
+  }
+
+  void verificaNumero()
+  {
+        if (numero[0] >= numero[1] && numero[0] >= numero[2])
         {
-           a = n1;
-           b = n2;
-           c = n3;
+           ponto[0] = numero[0];
+           ponto[1] = numero[1];
+           ponto[2] = numero[2];
         }
-
-        if (n2 >= n1 && n2 >= n3)
+        if (numero[1] >= numero[0] && numero[1] >= numero[2])
         {
-           a = n2; 
-           b = n1;
-           c = n3;
+           ponto[0] = numero[1]; 
+           ponto[1] = numero[0];
+           ponto[2] = numero[2];
         }
-
-        if (n3 >= n1 && n3 >= n2)
+        if (numero[2] >= numero[0] && numero[2] >= numero[1])
         {
-            a = n3;
-            b = n2;
-            c = n1;
-        }
-
-       
-        //se A for maior ou igual a B+C não é um triangulo
-
-        if (a >= (b + c))
-        {
-            printf("NAO FORMA TRIANGULO \n");
+            ponto[0] = numero[2];
+            ponto[1] = numero[1];
+            ponto[2] = numero[0];
         } 
-        // Senão for, então forma algum triângulo 
-        else
-        {
-            //Qual é o triângulo ?
-            if ((a * a) == (b * b) + (c * c))
-        {
-            printf("TRIANGULO RETANGULO \n");
-        }
+  }
 
-        if ((a * a) > ((b * b) + (c * c)))
+  void verificaTriangulo()
+  {
+      
+    if (ponto[0] >= (ponto[1] + ponto[2]))
         {
-            printf("TRIANGULO OBTUSANGULO \n");
+            printf("NAO FORMA TRIANGULO\n");
         }
-
-        if ((a * a) < ((b * b) + (c * c)))
+        if(ponto[0] < ponto[1] + ponto[2])
         {
-            printf("TRIANGULO ACUTANGULO \n");
+          if ((ponto[0] * ponto[0]) == (ponto[1] * ponto[1]) + (ponto[2] * ponto[2]))
+            {
+                printf("TRIANGULO RETANGULO\n");
+            }
+            if ((ponto[0] * ponto[0]) > ((ponto[1] * ponto[1]) + (ponto[2] * ponto[2])))
+            {
+                printf("TRIANGULO OBTUSANGULO\n");
+            }
+            if ((ponto[0] * ponto[0]) < ((ponto[1] * ponto[1]) + (ponto[2] * ponto[2])))
+            {
+                printf("TRIANGULO ACUTANGULO\n");
+            }
+            if ((ponto[0] == ponto[1]) && (ponto[1] == ponto[2]))
+            {
+                printf("TRIANGULO EQUILATERO\n");
+            }
+            if (((ponto[0] == ponto[1]) && (ponto[1] != ponto[2])) || ((ponto[0] == ponto[2]) && (ponto[1] != ponto[2])) || ((ponto[2] == ponto[1]) && (ponto[1] != ponto[0])))
+            {
+                printf("TRIANGULO ISOCELES\n");
+            }
         }
-        
-        
-        if ((a == b) && (b == c))
-        {
-            printf("TRIANGULO EQUILATERO \n");
-        }
-        
-        if (((a == b) && (b != c)) || ((a == c) && (b != c)) || ((c == b) && (b != a)))
-        {
-            printf("TRIANGULO ISOCELES \n");
-        }
-        }
-        
-        
-        
-        
-
-        
-        return 0;
-    }
+  } 
