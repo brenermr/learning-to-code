@@ -13,75 +13,76 @@ A entrada contem três valores de ponto flutuante de dupla precisão A (0 < A) ,
 
 Saída
 Imprima todas as classificações do triângulo especificado na entrada.
+
+
+ACEITA PELO URI.
 */
 
-#include <stdio.h>
-  double numero[3];
-  double ponto[3];
-  void verificaNumero();
-  void verificaTriangulo();
-
-
-  int main()
-  {
-    
-    scanf("%lf%lf%lf", &numero[0], &numero[1], &numero[2]);
-    verificaNumero();
-    verificaTriangulo();
-    return 0;
-
-  }
-
-  void verificaNumero()
-  {
-        if (numero[0] >= numero[1] && numero[0] >= numero[2])
+#include<stdio.h>
+    double vetor[3];               // A = 0    B = 1    C = 2
+    void ordenar();
+    void lerValor();
+    void verificaTriangulo();
+    void verificaTipo();
+    int main()
+    {
+        lerValor();
+        ordenar();
+        if (vetor[0] > 0 && vetor[1] > 0 && vetor[2] > 0)
         {
-           ponto[0] = numero[0];
-           ponto[1] = numero[1];
-           ponto[2] = numero[2];
+            verificaTriangulo();
+            verificaTipo();
         }
-        if (numero[1] >= numero[0] && numero[1] >= numero[2])
-        {
-           ponto[0] = numero[1]; 
-           ponto[1] = numero[0];
-           ponto[2] = numero[2];
-        }
-        if (numero[2] >= numero[0] && numero[2] >= numero[1])
-        {
-            ponto[0] = numero[2];
-            ponto[1] = numero[1];
-            ponto[2] = numero[0];
-        } 
-  }
-
-  void verificaTriangulo()
-  {
-      
-    if (ponto[0] >= (ponto[1] + ponto[2]))
-        {
-            printf("NAO FORMA TRIANGULO\n");
-        }
-        if(ponto[0] < ponto[1] + ponto[2])
-        {
-          if ((ponto[0] * ponto[0]) == (ponto[1] * ponto[1]) + (ponto[2] * ponto[2]))
-            {
-                printf("TRIANGULO RETANGULO\n");
-            }
-            if ((ponto[0] * ponto[0]) > ((ponto[1] * ponto[1]) + (ponto[2] * ponto[2])))
-            {
-                printf("TRIANGULO OBTUSANGULO\n");
-            }
-            if ((ponto[0] * ponto[0]) < ((ponto[1] * ponto[1]) + (ponto[2] * ponto[2])))
-            {
-                printf("TRIANGULO ACUTANGULO\n");
-            }
-            if ((ponto[0] == ponto[1]) && (ponto[1] == ponto[2]))
+        
+        return 0;
+    }
+   void verificaTipo()
+   {
+       if (vetor[0] == vetor[1] && vetor[1] == vetor[2])
             {
                 printf("TRIANGULO EQUILATERO\n");
-            }
-            if (((ponto[0] == ponto[1]) && (ponto[1] != ponto[2])) || ((ponto[0] == ponto[2]) && (ponto[1] != ponto[2])) || ((ponto[2] == ponto[1]) && (ponto[1] != ponto[0])))
+            }else if (vetor[0] == vetor[1] || vetor[1] == vetor[2] || vetor[0] == vetor[2])
             {
-                printf("TRIANGULO ISOCELES\n");
+                printf("TRIANGULO ISOSCELES\n");
             }
-        }
-  } 
+   }   
+    void verificaTriangulo()
+    {
+       double a2, b2, c2;
+            a2 = vetor[0]*vetor[0];
+            b2 = vetor[1]*vetor[1];
+            c2 = vetor[2]*vetor[2];
+            
+            if (vetor[0] >= (vetor[1] + vetor[2]))
+            {
+                printf("NAO FORMA TRIANGULO\n");
+            }else if(a2 == (b2 + c2)){
+                printf("TRIANGULO RETANGULO\n");
+            }else if (a2 > (b2 + c2))
+            {
+                printf("TRIANGULO OBTUSANGULO\n");
+            }else if (a2 < (b2 + c2))
+            {
+                printf("TRIANGULO ACUTANGULO\n");
+            }       
+    }
+    void lerValor()
+    {
+        scanf("%lf%lf%lf", &vetor[0], &vetor[1], &vetor[2]);
+    }
+    void ordenar()
+    {
+        double swap;
+            if(vetor[1] > vetor[0] && vetor[1] >= vetor[2])
+            {
+                swap = vetor[1];
+                vetor[1] = vetor[0];
+                vetor[0] = swap;
+            }
+            if (vetor[2] > vetor[0] && vetor[2] >= vetor[1])
+            {
+                swap = vetor[2];
+                vetor[2] = vetor[0];
+                vetor[0] = swap;
+            }
+    }
