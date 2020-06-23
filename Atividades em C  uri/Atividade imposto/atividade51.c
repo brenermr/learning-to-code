@@ -9,7 +9,7 @@ ACIMA DE R$ 4500.00          28%
 
 #include<stdio.h>
     
-    b
+    
     double salario[2];
     void classificar();
 
