@@ -17,16 +17,17 @@ I=2 J=?
         double matriz[33][2];// 0= i 1=j
         double i = 0;
         double j = 1;
-       int l, c;
+        int l;
         int count = 0;
+        double aux = 0.0;
 
         for (l = 0; l < 33; l++)
         {
             if (count == 3)
             {
-                j = 1;
+                aux += 0.2;
+                j = 1.0 + aux;
                 i +=  0.2;
-                j += 0.2;
                 count = 0;
             }
             matriz[l][0] = i;
@@ -38,8 +39,16 @@ I=2 J=?
 
         for (l = 0; l < 33; l++)
         {
-            printf("I=%.1lf J=%.1lf\n", matriz[l][0], matriz[l][1]);
+            if (matriz[l][0] == 0.0 || matriz[l][0] == 1.0 || matriz[l][0] > 1.8)
+            {
+                printf("I=%.0lf J=%.0lf\n", matriz[l][0], matriz[l][1]);
+            }else
+            {
+                printf("I=%.1lf J=%.1lf\n", matriz[l][0], matriz[l][1]);
+            }
+            
+            
         }
         
-        
+        return 0;
     }
