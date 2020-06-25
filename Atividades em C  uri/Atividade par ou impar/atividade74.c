@@ -32,14 +32,16 @@ Exemplo de Entrada	Exemplo de Saída
         for (i = 0; i < x; i++)
         {
             scanf("%d", &valores[i]);
-        }   
+        }
+        for(i = 0; i < x; i ++)
+        {
             if(valores[i] != 0)
             {
                 if (valores[i] % 2 == 0)
                 {
                     if (valores[i] > 0)
                     {
-                        printf("EVEN POSITIVE \n");
+                        printf("EVEN POSITIVE \n");//even par
                     }else
                     {
                         printf("EVEN NEGATIVE \n");
@@ -49,21 +51,18 @@ Exemplo de Entrada	Exemplo de Saída
                 {
                     if (valores[i] > 0)
                     {
-                        printf("ODD POSITIVE \n");
+                        printf("ODD POSITIVE\n");
                     } else
                     {
-                        printf("ODD NEGATIVE \n");
+                        printf("ODD NEGATIVE\n");
                     }             
                 }
                                
             } else
             {
-                printf("NULL \n");
+                printf("NULL\n");
             }
-            
-            
-            
-        
+        }        
         
          return 0;
     }

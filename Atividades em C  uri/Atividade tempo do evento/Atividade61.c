@@ -38,16 +38,53 @@ Dia 9
 */
 #include<stdio.h>  
 #include<string.h>
-
+    int time[2][4]; // [0]dia, [1]hora, [2]minuto, [3]segundo
+    void calcula();
+    void lerValores();
     int main()
     { 
+        lerValores();
+        calcula();
+        return 0;
+    }
 
-        char texto[10];
-        int inicio[4];// [0]dia, [1]hora, [2]minuto, [3]segundo
-        int fim[4];// [0]dia, [1]hora, [2]minuto, [3]segundo
-        int segundosInicio, segundosFim, segundosTotal,
+    void lerValores()
+    {
+        int i;        
+       scanf("Dia %d", &time[0][0]);
+       scanf("%d : %d : %d\n", &time[0][1], &time[0][2], &time[0][3]);
+       scanf("Dia %d", &time[1][0]);
+       scanf("%d : %d : %d", &time[1][1], &time[1][2], &time[1][3]);   
+        
+    }
 
-        scanf("%s %d", texto, &inicio[0];
-        scanf("%d %s %d %s %d",&inicio[0];
+    void calcula()
+    {
+        int day, hour, minute, second;
+        day = time[1][0] - time[0][0];
+        hour = time[1][1] - time[0][1];
+        minute = time[1][2] - time[0][2];
+        second = time[1][3] - time[0][3];
 
+        if(second < 0)
+        {
+            second+= 60;
+            minute--;
+        }
+        if (minute < 0)
+        {
+            minute+= 60;
+            hour--;
+        }
+        if (hour < 0)
+        {
+            hour += 24;
+            day--;
+        }
+        
+        printf("%d dia(s)\n", day);
+        printf("%d hora(s)\n", hour);
+        printf("%d minuto(s)\n", minute);
+        printf("%d segundo(s)\n", second);
+              
     }

@@ -62,5 +62,6 @@ Exemplo de Entrada	Exemplo de Saída
             printf("%.1lf\n", media);
             media = 0;
         }
+        return 0;
     }
  
