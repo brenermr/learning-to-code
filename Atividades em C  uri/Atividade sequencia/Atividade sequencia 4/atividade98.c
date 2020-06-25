@@ -36,7 +36,6 @@ I=2 J=?
             j++;
             count++;
         }
-
         for (l = 0; l < 33; l++)
         {
             if (matriz[l][0] == 0.0 || matriz[l][0] == 1.0 || matriz[l][0] > 1.8)
@@ -45,9 +44,7 @@ I=2 J=?
             }else
             {
                 printf("I=%.1lf J=%.1lf\n", matriz[l][0], matriz[l][1]);
-            }
-            
-            
+            }       
         }
         
         return 0;
