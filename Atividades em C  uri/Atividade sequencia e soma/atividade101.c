@@ -26,8 +26,9 @@ Para cada dupla de valores, imprima a sequência do menor até o maior e a soma 
            scanf("%d%d", &vetor[0], &vetor[1]);
            if (vetor[0] == 0 || vetor[1] == 0)
            {
-               break;
                off = 0;
+               break;
+               
            }
            
            if (vetor[0] > vetor[1])
