@@ -17,6 +17,7 @@ Exemplo de saída
 */
 
 #include<stdio.h>
+#include<string.h>
 
     float porcentagem(float notasAcima, int alunosDaturma);
 
@@ -45,7 +46,7 @@ Exemplo de saída
                     count++;
                 }
             }
-            printf("%.3lf\n", porcentagem(count, alunosDaTurma));
+            printf("%.3lf%s\n", porcentagem(count, alunosDaTurma), '%');
             //printf("%.3lf%\n", porcentagem(count, alunosDaTurma));
             casos--;
         }
