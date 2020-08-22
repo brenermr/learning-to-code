@@ -138,6 +138,7 @@ public class ImcMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
+        
         String name = jTextFieldName.getText();
         String lastName = jTextFieldSurname.getText();
         float weight = Float.parseFloat(jTextFieldWeight.getText());
