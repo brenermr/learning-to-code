@@ -128,7 +128,20 @@ public class display extends javax.swing.JFrame {
     private void jButtonCountingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCountingActionPerformed
         String winner = "";
         
-        
+       /* 
+       
+       ********* fork below ********
+       
+        int[] motherfuckers = new int[4];
+        int max_value =  0;
+        for(int i  = ; i < motherfuckers.length; i++)//motherfuckers.length = 3; 0- mf 1 / 1- mf2 / 2 - mf3 
+        {
+            if(motherfuckers[i] > max_value)
+            {
+                max_value = motherfuckers[i];
+            }
+        }
+        */
         
         if(motherfuckers[0] == motherfuckers[1] && motherfuckers[1] == motherfuckers[2])
         {
