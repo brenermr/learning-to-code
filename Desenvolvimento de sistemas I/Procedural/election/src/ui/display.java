@@ -44,6 +44,10 @@ public class display extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaRanking = new javax.swing.JTextArea();
+        jSeparator3 = new javax.swing.JSeparator();
+        jButtonStart = new javax.swing.JButton();
+        jButtonEnd = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -53,6 +57,7 @@ public class display extends javax.swing.JFrame {
         jLabel1.setText("CANDIDATOS:");
 
         jButtonMotherfucker2.setText("Isac Nilson");
+        jButtonMotherfucker2.setEnabled(false);
         jButtonMotherfucker2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMotherfucker2ActionPerformed(evt);
@@ -60,6 +65,7 @@ public class display extends javax.swing.JFrame {
         });
 
         jButtonMotherfucker1.setText("Mário Cleiton");
+        jButtonMotherfucker1.setEnabled(false);
         jButtonMotherfucker1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMotherfucker1ActionPerformed(evt);
@@ -67,6 +73,7 @@ public class display extends javax.swing.JFrame {
         });
 
         jButtonMotherfucker3.setText("Acm Feto");
+        jButtonMotherfucker3.setEnabled(false);
         jButtonMotherfucker3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMotherfucker3ActionPerformed(evt);
@@ -74,6 +81,7 @@ public class display extends javax.swing.JFrame {
         });
 
         jButtonCounting.setText("CONTAR");
+        jButtonCounting.setEnabled(false);
         jButtonCounting.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCountingActionPerformed(evt);
@@ -95,50 +103,81 @@ public class display extends javax.swing.JFrame {
         jTextAreaRanking.setRows(5);
         jScrollPane1.setViewportView(jTextAreaRanking);
 
+        jButtonStart.setText("INICIAR");
+        jButtonStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonStartActionPerformed(evt);
+            }
+        });
+
+        jButtonEnd.setText("FINALIZAR");
+        jButtonEnd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEndActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("ELEIÇÃO DE GADO NAICONAL");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator2)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(23, 23, 23)
-                                .addComponent(jButtonMotherfucker1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonMotherfucker2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonMotherfucker3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(154, 154, 154)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(155, 155, 155)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(149, 149, 149)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jButtonCounting)
                                     .addComponent(jLabel4)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextFieldOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldVotes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTextFieldVotes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(jButtonMotherfucker1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonMotherfucker2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonMotherfucker3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(154, 154, 154)
+                                .addComponent(jLabel1)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonEnd)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonEnd, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -161,123 +200,118 @@ public class display extends javax.swing.JFrame {
                 .addComponent(jButtonCounting)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    int max_votes = 0;//Guarda a quantidade de votos  vencedor
+    int winner = 0;//guarda  o indice do vetor  do vencedor
+    int draw_votes = 0;// 0- sem empate, 1- empate sem votos, 2- empate com votos iguais ,3-empate entre dois
     int[] votes = new int[3]; //Array  com 3 índices, cada índice é equivalente a um candidato
     String[] names = {"Mário Cleiton", "Isac Nilson", "Acm Feto"};
-    
-    
+    String outputFormat;
+    String draw_names = "";
+
+
     private void jButtonMotherfucker1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMotherfucker1ActionPerformed
-        votes[0]++;
+        votes[0]++;//incrementa um voto 
     }//GEN-LAST:event_jButtonMotherfucker1ActionPerformed
 
     private void jButtonMotherfucker2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMotherfucker2ActionPerformed
-        votes[1]++;
+        votes[1]++;//incrementa um voto
     }//GEN-LAST:event_jButtonMotherfucker2ActionPerformed
 
     private void jButtonMotherfucker3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMotherfucker3ActionPerformed
-        votes[2]++;
+        votes[2]++;//incrementa um voto
     }//GEN-LAST:event_jButtonMotherfucker3ActionPerformed
 
     private void jButtonCountingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCountingActionPerformed
-        String outputFormat;
-        String draw_names = "";
-        
-        int max_votes = 0;
-        int winner = 0;
-        int draw_votes = 0; // 0- sem empate, 1- empate sem votos, 2- empate com votos iguais ,3-empate entre dois
-        for(int i=0; i < names.length; i++)
+         
+        for (int i = 0; i < names.length; i++)//varre o vetor
         {
-            if(votes[i] > max_votes)
+            if (votes[i] > max_votes)//compara o número de votos com o valor do maior voto
             {
-                max_votes = votes[i];
-                winner = i;
-                
-            } 
+                max_votes = votes[i];// guarda o valor de votos na variável que representa os votos de maior número
+                winner = i;//guarda o indice do vencedor para manipula nos Arrays: int votes[i]  e String names[i] 
+            }
         }
-        
-        if(votes[0] == votes[1] && votes[0] == votes[2])
+        if (votes[0] == votes[1] && votes[0] == votes[2])//todos os votos iguais
         {
-            if(votes[0] == 0 && votes[1] == 0 && votes[2] == 0)
+            if (votes[0] == 0 && votes[1] == 0 && votes[2] == 0)
             {
-                draw_votes = 1;
+                draw_votes = 1;//todos os votos nulos
             }else
             {
-                draw_votes = 2;
+                draw_votes = 2;//todos os votos iguais não nulos
             }
-        }else if(votes[0] == votes[1] || votes[0] == votes[2] || votes[1] == votes[2])
+        }else if (votes[0] == votes[1] || votes[0] == votes[2] || votes[1] == votes[2])//alguma igualdade
         {
-            if(votes[0] == votes[1])
+            if (votes[0] == votes[1])//primeira igualdade de votos
+            {
+                draw_votes = 3;//Empate entre dois
+                if (votes[0] != 0 || votes[1] != 0)//verifica se não é um empate nulo, ex: 1, 1
                 {
-                    draw_votes = 3;
-                    if(votes[0] != 0 || votes[1] != 0)
+                    if (votes[0] == max_votes && votes[1] == max_votes)//empates "vencedores" 
                     {
-                        if(votes[0] == max_votes && votes[1] == max_votes)
-                        {
-                            draw_names = names[0] + " & " + names[1];
-                            JOptionPane.showMessageDialog(null, "Os candidatos: " + draw_names + ", empataram com: " + max_votes + ",voto(s).");
-                            jTextFieldOutput.setText("DUO DRAW");
-                            jTextFieldVotes.setText("");
-                        }else
-                        {
-                            draw_votes = 0;
-                        }
-                    }else
+                        draw_names = names[0] + " & " + names[1];//designa o nome dos candidatos que empataram
+                        JOptionPane.showMessageDialog(null, "Os candidatos: " + draw_names + ", empataram com: " + max_votes + ",voto(s).");
+                        jTextFieldOutput.setText("DUO DRAW");//expressa o tipo de empate       
+                    }else 
                     {
-                        draw_votes = 0;
+                        draw_votes = 0;//sem empates
                     }
-                }else if(votes[0] == votes[2])
+                }else
                 {
-                    draw_votes = 3;
-                    if(votes[0] != 0 || votes[2] != 0)
-                    {
-                        if(votes[0] == max_votes && votes[2] == max_votes)
-                        {
-                            draw_names = names[0] + " & " + names[2];
-                            JOptionPane.showMessageDialog(null, "Os candidatos: " + draw_names + ", empataram com: " + max_votes + ",voto(s).");
-                            jTextFieldOutput.setText("DUO DRAW");
-                            jTextFieldVotes.setText("");
-                        }else
-                        {
-                            draw_votes = 0;
-                        }
-                    }else
-                    {
-                        draw_votes = 0;
-                    }          
-                }else if(votes[1] == votes[2])
-                {
-                    draw_votes = 3;
-                    if(votes[1] != 0 || votes[2] != 0)
-                    {
-                        if(votes[1] == max_votes && votes[2] == max_votes)
-                        {
-                            draw_names = names[1] + " & " + names[2];
-                            JOptionPane.showMessageDialog(null, "Os candidatos: " + draw_names + ", empataram com: " + max_votes + ",voto(s).");
-                            jTextFieldOutput.setText("DUO DRAW");
-                            jTextFieldVotes.setText("");
-                        }else
-                        {
-                            draw_votes = 0;
-                        }
-                        
-                    }else
-                    {
-                        draw_votes = 0;
-                    }
+                    draw_votes = 0;//sem empates
                 }
+            }else if (votes[0] == votes[2])//segunda igualdade de votos
+            {
+                draw_votes = 3;//Empate entre dois
+                if (votes[0] != 0 || votes[2] != 0)//verifica se não é um empate nulo, ex: 1, 1
+                {
+                    if (votes[0] == max_votes && votes[2] == max_votes)//empates "vencedores" 
+                    {
+                        draw_names = names[0] + " & " + names[2];//designa o nome dos candidatos que empataram
+                        JOptionPane.showMessageDialog(null, "Os candidatos: " + draw_names + ", empataram com: " + max_votes + ",voto(s).");
+                        jTextFieldOutput.setText("DUO DRAW");//expressa o tipo de empate       
+                    }else
+                    {
+                        draw_votes = 0;//sem empates
+                    }
+                }else
+                {
+                    draw_votes = 0;//sem empates
+                }
+            }else if (votes[1] == votes[2])//terceira igualdade de votos
+            {
+                draw_votes = 3;//empate entre dois
+                if (votes[1] != 0 || votes[2] != 0)//verifica se não é um empate nulo, ex: 1, 1
+                {
+                    if (votes[1] == max_votes && votes[2] == max_votes)//empates "vencedores" 
+                    {
+                        draw_names = names[1] + " & " + names[2];//designa o nome dos candidatos que empataram
+                        JOptionPane.showMessageDialog(null, "Os candidatos: " + draw_names + ", empataram com: " + max_votes + ",voto(s).");
+                        jTextFieldOutput.setText("DUO DRAW");//expressa o tipo de empate    
+                    }else
+                    {
+                        draw_votes = 0;//sem empates
+                    }
+                }else
+                {
+                    draw_votes = 0;//sem empates
+                }
+            }
         }else
         {
-            draw_votes = 0;
+            draw_votes = 0;//sem empates
         }
-        
-        if(draw_votes == 0)
+
+        if (draw_votes == 0)//Se a situação final for sem empates
         {
-            switch (winner) 
+            switch (winner)//Verifica o índice do vencedor
             {
                 case 0:
                     jTextFieldOutput.setText(names[0]);
@@ -292,30 +326,49 @@ public class display extends javax.swing.JFrame {
                     jTextFieldVotes.setText(String.valueOf(max_votes));
                     break;
             }
-        }else if(draw_votes == 1)
+        }else if (draw_votes == 1)//Senão se a situação final for empate sem votos, ex: 0, 0, 0
         {
             jTextFieldOutput.setText("ALL nULL");
-        }else if(draw_votes == 2)
+        }else if (draw_votes == 2)//Senão se a situação final for empate com valores iguais, ex: 15, 15, 15
         {
             jTextFieldOutput.setText("ALL DRAW");
         }
 
-        
+        //Preenche a área de texto com o nome e a respectiva quantidade de votos do candidato
         outputFormat = String.format(""
                 + "- %s, votos: %d\n- %s, votos: %d\n- %s, votos: %d"
                 + "", names[0], votes[0], names[1], votes[1], names[2], votes[2]);
         jTextAreaRanking.setText(outputFormat);
-        
+
+        //Habilita o botão  Inicio novamente
+        jButtonStart.setEnabled(true);
+
+    }//GEN-LAST:event_jButtonCountingActionPerformed
+
+    private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
+        //Limpa as variáveis e os campos/área de texto
+        jButtonMotherfucker1.setEnabled(true);
+        jButtonMotherfucker2.setEnabled(true);
+        jButtonMotherfucker3.setEnabled(true);
+        jButtonStart.setEnabled(false);
+        jTextFieldOutput.setText("");
+        jTextFieldVotes.setText("");
+        jTextAreaRanking.setText("");
         max_votes = 0;
         draw_names = "";
         draw_votes = 0;
-        for(int i=0; i < names.length; i++)
+        for (int i = 0; i < names.length; i++)//varre o vetor com os votos dos candidatos
         {
-            votes[i] = 0;
+            votes[i] = 0;//define o valor do índice para 0
         }
-                    
- 
-    }//GEN-LAST:event_jButtonCountingActionPerformed
+    }//GEN-LAST:event_jButtonStartActionPerformed
+
+    private void jButtonEndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEndActionPerformed
+        jButtonMotherfucker1.setEnabled(false);
+        jButtonMotherfucker2.setEnabled(false);
+        jButtonMotherfucker3.setEnabled(false);
+        jButtonCounting.setEnabled(true);
+    }//GEN-LAST:event_jButtonEndActionPerformed
 
     /**
      * @param args the command line arguments
@@ -354,16 +407,20 @@ public class display extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCounting;
+    private javax.swing.JButton jButtonEnd;
     private javax.swing.JButton jButtonMotherfucker1;
     private javax.swing.JButton jButtonMotherfucker2;
     private javax.swing.JButton jButtonMotherfucker3;
+    private javax.swing.JButton jButtonStart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextArea jTextAreaRanking;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldOutput;
