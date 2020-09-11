@@ -40,6 +40,9 @@ public class display extends javax.swing.JFrame {
         jTextAreaDisplay = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("STORE SYSTEM");
+        setBackground(javax.swing.UIManager.getDefaults().getColor("nb.diff.added.color"));
+        setResizable(false);
 
         jTableProducts.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -69,6 +72,8 @@ public class display extends javax.swing.JFrame {
 
         jLabel3.setText("WEED HOUSE'S OF JERUZA");
 
+        jButtonBuy.setBackground(new java.awt.Color(0, 102, 51));
+        jButtonBuy.setForeground(new java.awt.Color(0, 0, 0));
         jButtonBuy.setText("Efetuar compra");
         jButtonBuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,8 +81,10 @@ public class display extends javax.swing.JFrame {
             }
         });
 
+        jTextAreaDisplay.setEditable(false);
         jTextAreaDisplay.setColumns(20);
-        jTextAreaDisplay.setRows(5);
+        jTextAreaDisplay.setFont(new java.awt.Font("Baekmuk Dotum", 1, 18)); // NOI18N
+        jTextAreaDisplay.setRows(1);
         jScrollPane2.setViewportView(jTextAreaDisplay);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -109,7 +116,7 @@ public class display extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane2)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
