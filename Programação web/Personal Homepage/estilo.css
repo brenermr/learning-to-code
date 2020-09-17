@@ -1,0 +1,64 @@
+
+
+
+/*
+ **** Flex class **** 
+*/
+.d-flex
+{
+    display: flex;
+}
+
+
+/*
+ **** Layout - Tamanho**** 
+*/
+
+
+.left-page
+{
+    height: 900px;
+    flex: 1;
+    margin: 10px;
+    background-color: darkcyan;
+    
+}
+
+.right-page
+{
+    height: 900px;
+    flex: 2;
+    margin: 10px;
+    background-color: darkkhaki;
+}
+
+.info-text
+{
+    margin: 10px;
+}
+
+.header-text
+{
+    margin: 10px;
+
+}
+
+.header-logo
+{
+    float: right;
+    width: 120px;
+    height: 120px;
+}
+
+/*
+**** Formatações ****
+*/
+.bold-text
+{
+    font-weight: bold;
+}
+
+.non-highlight
+{
+    color: wheat;
+}    

@@ -1,0 +1,62 @@
+.d-flex
+{
+    display: flex;
+}
+
+.bg-grey
+{
+    background-color: bisque;
+    border: 2px dashed blueviolet;
+}
+
+.left
+{
+    flex: 1;
+    margin-right: 5px;
+    height: 250px;
+}
+
+.middle
+{
+    flex: 1;
+    margin-right: 5px;
+    height: 250px;
+}
+
+.right
+{
+    flex: 1;
+    height: 250px;
+}
+
+.wrap
+{
+    margin-top: 10px;
+}
+
+header
+{
+    height: 100px;
+    
+}
+
+nav
+{
+    height: 60px;
+    margin-top: 10px;
+}
+
+footer
+{
+    height: 60px;
+    margin-top: 10px;
+}
+
+
+
+.justify
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
