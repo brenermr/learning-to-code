@@ -1,0 +1,60 @@
+/* DISPLAY */
+.d-flex
+{
+    display: flex;
+}
+
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+}
+.justify
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    height: 800px;
+    width: 50%;
+}
+
+
+ /* TEXT-FORMAT */
+.text-shadow-white
+{
+    text-shadow: 1px 1px 10px whitesmoke;
+}
+p
+{
+    margin: 25px;
+    text-align: center;
+}
+
+
+/* LAYOUT-FORMAT */
+body
+{
+    background-image: url("https://media1.tenor.com/images/272dd4be81ba7b4c056425684087ebd9/tenor.gif?itemid=5633116");
+}
+hr
+{
+    color: whitesmoke;
+    width: 100%;
+}
+.bg-white-transparency
+{
+    background: rgba(58, 56, 56, 0.4);
+    border-radius: 7px;
+}
+table, tr, td
+{
+    border: 1px dashed cadetblue;
+    padding: 5px;
+    color: white;
+}
+
+
+
