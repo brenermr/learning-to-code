@@ -2,6 +2,7 @@
 package display;
 
 import com.sun.javafx.image.impl.IntArgb;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -93,18 +94,21 @@ public class ui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCalcularActionPerformed
-    
     //Var globais
     double preco;
+    double valorTotal;
     int taxa;//A taxa do juros
     int  parcela;
     int juros;//Eh o juros do valor baseado na taxa
     
-    //Functions
+    
+    //Funções
+    public void limparValores()
+    {
+        preco = 0;
+        taxa = 0;
+        juros = 0;
+    }
     public void verificarCodigo()
     {
         int code;//Variável que armazena o código da entrada do sistema
@@ -116,10 +120,34 @@ public class ui extends javax.swing.JFrame {
             {
                 preco = (Double)jTableValores.getModel().getValueAt(i, 1);
                 parcela = (Integer)jTableValores.getModel().getValueAt(i, 2);
-                taxa = 0;
+                taxa = (Integer)jTableValores.getModel().getValueAt(i, 3);
+                break;
             }
         }
     }
+    private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
+        boolean estado;//Se existe um código ou não;
+        
+        try
+        {
+            verificarCodigo();//Se o código for equivalente ou for um número real, passa para próxima linha  ! 
+            estado = true;
+        } catch (NumberFormatException e)
+        {
+            JOptionPane.showMessageDialog(null, "O código deve ser um número ! erro: " + e);
+            estado = false;
+        }
+        
+        if(estado == true)
+        {
+            
+        }else
+        {
+            limparValores();
+        }
+        
+    }//GEN-LAST:event_jButtonCalcularActionPerformed
+
  
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
